@@ -1,11 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clase 4 Js</title>
     <style>
+        /*PRACTICA 2*/
+        body {
+            background-color: wheat;
+        }
+
+        label {
+            display: block;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            border: 3px solid transparent;
+            width: 40%;
+            height: 30px;
+            padding: 0 0 0 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        span {
+            display: block;
+        }
+
+        #enviar {
+            width: 20%;
+            background-color: tomato;
+            color: wheat;
+            text-transform: uppercase;
+            display: block;
+            margin-top: 20px;
+        }
+
+        .s-nombre,
+        .s-correo,
+        .s-clave,
+        .s-submit {
+            display: none;
+        }
+
+        .s-nombre-error,
+        .s-correo-error,
+        .s-clave-error,
+        .s-submit-error {
+            color: tomato;
+        }
+
+        .i-correcto,
+        .i-incorrecto {
+            outline: none;
+            box-shadow: 3px 0 30px rgb(27, 27, 27);
+        }
+
+        .i-correcto {
+            border: 3px solid green;
+        }
+
+        .i-incorrecto {
+            border: 3px solid tomato;
+        }
+
         /* PRACTICA 1
         .Correcto{
             color: green;
@@ -15,7 +77,25 @@
         } */
     </style>
 </head>
+
 <body>
+    <form action="enviar.php" method="post" id="form">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+        <span class="s-nombre" id="s-nombre">El nombre tiene que ser letras entre 3 a 10 digitos</span>
+
+        <label for="clave">Contraseña</label>
+        <input type="text" id="clave" name="clave" placeholder="Contraseña">
+        <span class="s-clave" id="s-clave">El password tiene que ser letras y números entre 4 a 10 digitos</span>
+
+        <label for="correo">Correo electrónico</label>
+        <input type="text" id="correo" name="correo" placeholder="Correo ej. nombre@correo.com">
+        <span class="s-correo" id="s-correo">El correo tiene que tener un formato ej nombre@correo.com</span>
+
+        <input type="submit" value="Registarme" id="enviar">
+        <span class="s-submit" id="s-submit">Registro enviado correctamente!</span>
+
+    </form>
     <!-- PRACTICA 1
         <form action="#" method="post">
         Nombre: <input type="text" id="nombre">
@@ -25,4 +105,5 @@
     </form> -->
     <script src="js/clase4.js"></script>
 </body>
+
 </html>
