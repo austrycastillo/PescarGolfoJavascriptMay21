@@ -13,7 +13,7 @@
 //     //paso 1 crear el objeto -> XHR
 //     var ajax = new XMLHttpRequest()
 //     //paso 2 abrir el archivo
-//     ajax.open("get","archivo.txt")
+//     ajax.open("get","archivo.txt") //post, put, delete -> métodos http 
 //     //paso 3 cargar el archivo
 //     ajax.onload = cargarArchivo
 //     //paso 4 ejecutar
