@@ -1,20 +1,20 @@
 //PRACTICA 1 ****PENDIENTE CON EL FILEREADER, VERIFICAR
-let caja = document.getElementById("caja")
-caja.addEventListener("dragover", (e) => {
-    e.preventDefault()
-    // console.log(e)
-})
-caja.addEventListener("drop", (e) => {
-    e.preventDefault()
-    //console.log(e)
-    let archivo = new FileReader()//leer ficheros
-    archivo.addEventListener("load", (e) => {
-        console.log(e.target.result)
-        caja.style.backgroundImage = "url('" + e.target.result + "')"
-    })
-    archivo.readAsDataURL(e.dataTransfer.files[0])
-    console.log(e.dataTransfer.files[0].name)
-})
+// let caja = document.getElementById("caja")
+// caja.addEventListener("dragover", (e) => {
+//     e.preventDefault()
+//     //console.log(e)
+// })
+// caja.addEventListener("drop", (e) => {
+//     e.preventDefault()
+//     //console.log(e)
+//     let archivo = new FileReader()//leer ficheros
+//     archivo.addEventListener("load", (e) => {
+//         console.log(e.target.result)
+//         caja.style.backgroundImage = "url('" + e.target.result + "')"
+//     })
+//     archivo.readAsDataURL(e.dataTransfer.files[0])
+//     console.log(e.dataTransfer.files[0].name)
+// })
 
 //PRACTICA 2
 // let caja1 = document.querySelector("#caja1")
@@ -116,19 +116,19 @@ caja.addEventListener("drop", (e) => {
 
 /*PRACTICA 6 FETCH API: obligado un parametro que sería la ruta del recurso, me devuelve una promesa
 */
-// let btn = document.querySelector("#btn")
-// btn.addEventListener("click", () => {
-//     fetch("archivo.txt").then((respuesta) => {
-//         console.log(respuesta)
-//         if (respuesta.ok) {
-//             respuesta.text().then((datos) => {
-//                 console.log(datos)
-//             })
-//         }else{
-//             mostrarError(respuesta.status)
-//         }
-//     }).catch(mostrarError)
-// })
-// function mostrarError(err){
-//     console.log("muestro el error " + err)
-// }
+let btn = document.querySelector("#btn")
+btn.addEventListener("click", () => {
+    fetch("archivo.txt").then((respuesta) => {
+        console.log(respuesta)
+        if (respuesta.ok) {
+            respuesta.text().then((datos) => {
+                console.log(datos)
+            })
+        }else{
+            mostrarError(respuesta.status)
+        }
+    }).catch(mostrarError)
+})
+function mostrarError(err){
+    console.log("muestro el error " + err)
+}
