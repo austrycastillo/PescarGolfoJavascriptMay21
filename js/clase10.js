@@ -32,24 +32,36 @@
 
 // */
 
-class instrumento{
-    nombre
-    //#nombre
-    // constructor(nombre){
-    //     this.nombre = nombre
-    // }
-    mostrar(){
-        return this.nombre
+// class instrumento{
+//     nombre
+//     //#nombre
+//     // constructor(nombre){
+//     //     this.nombre = nombre
+//     // }
+//     mostrar(){
+//         return this.nombre
+//     }
+//     agregar(nombre){
+//         this.nombre = nombre
+//     }
+//     // get nombre(){
+//     //     return this.nombre
+//     // }
+// }
+// let obj1 = new instrumento()
+// //console.log(obj1.mostrar())
+// obj1.agregar("bateria")
+// //console.log(obj1.nombre())
+
+class instrumento {
+    set nombre(nombre) {
+        this._nombre = nombre
     }
-    agregar(nombre){
-        this.nombre = nombre
+    get nombre() {
+        return this._nombre
     }
-    // get nombre(){
-    //     return this.nombre
-    // }
+
 }
 let obj1 = new instrumento()
-//console.log(obj1.mostrar())
-obj1.agregar("bateria")
-//console.log(obj1.nombre())
-
+obj1.nombre = "bateria"
+console.log(obj1.nombre)
