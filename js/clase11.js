@@ -144,5 +144,17 @@ botoncito.addEventListener("click", () => {
     nombre = nombre.value
     localStorage.setItem("nombre", nombre)
     localStorage.setItem("apellido", apellido.value)
+    localStorage.setItem("loquesea","blablabla")
     alert("Guardado correctamente")
+})
+
+let a = document.querySelector("a")
+a.addEventListener("click",(e)=>{
+    e.preventDefault()
+    console.log(localStorage.getItem("nombre"))
+    console.log(localStorage.getItem("apellido"))
+    let p = document.createElement("p")
+    p.innerText = localStorage.getItem("nombre") + " " + localStorage.getItem("apellido")
+    document.body.appendChild(p)
+    console.log(localStorage.getItem("loquesea"))
 })
